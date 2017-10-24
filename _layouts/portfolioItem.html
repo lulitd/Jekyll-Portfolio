@@ -1,0 +1,153 @@
+---
+layout: default
+section_id: portfolio
+---
+
+<div class="full image-bg bg-left {%if page.useDarkNav == false%} dark {%else%} light {%endif%}"
+style="{% if page.headerImage %}background-image: url({{site.url}}/{{page.headerImage}});{% endif %}
+">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <div  class="wow slideInDown animLogo {%if page.useDarkNav == false%}light{%endif%} small" id="animLogo"></div>
+        <h1 class="wow slideInUp {%if page.useDarkNav == false%} white {%endif%}">{{page.title}}</h1>
+        <p class="wow slideInUp">Case Study</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="full white">
+  <div class="row">
+    <div class="large-8 columns">
+      <div class="project-intro">
+        <div class="section-title">
+        <h2>{{page.title}}</h2>
+              {% assign collab = page.collaboration %}
+          {%if collab !=nill and collab !=empty %}
+              <p>In collaboration with
+
+{%for c in collab %}
+{{c}}{%if forloop.rindex==2 %} & {%else %}{%unless forloop.last==true%},{%endunless%} {%endif%} <wbr>
+
+{%endfor%}
+              </p>
+          {% endif %}
+          </div>
+            {{content}}
+
+        {% if page.youtubeURL %}
+            <div class="spacing"></div>
+        <div class="flex-video widescreen">
+          <iframe src={{ page.youtubeURL }}></iframe>
+        </div>
+        {% endif %}
+
+        {% if page.vimeoURL %}
+        <div class="spacing"></div>
+        <div class="flex-video widescreen vimeo">
+          <iframe src={{ page.vimeoURL }} frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+    <div class="large-4 columns">
+      <div class="project-intro">
+        <div class="four spacing "></div>
+        <div class="uppercase small-12 small-text-left medium-6 medium-text-center large-12 large-text-right columns">
+        {% if page.date %}
+          <h4>Date</h4>
+          <p><span>{{page.date | date: "%B %Y"}}</span></p>
+        {% endif %}
+        {% if page.clients != nil and page.clients != empty %}
+        <h4>Client</h4>
+          <p> {% for cl in page.clients %}
+            <span>{{cl | capitalize }}</span></p>
+              {% endfor %}
+        {% endif %}
+        {% if page.exhibition != nil and page.exhibition != empty %}
+          <h4>Exhibitions</h4>
+            <p> {% for ex in page.exhibition %}
+              <span>{{ex | capitalize }}</span></p>
+                {% endfor %}
+        {% endif %}
+        {% if page.press != nil and page.press != empty %}
+      <h4>Press/Publications</h4>
+          <p> {% for p in page.press %}
+            <span>{{p | capitalize }}</span></p>
+              {% endfor %}
+        {% endif %}
+      </div>
+      <div class="uppercase small-12 small-text-left medium-6 medium-text-center large-12 large-text-right columns">
+      {% if page.Tools != nil and page.Tools != empty %}
+      <h4>Tools</h4>
+        <ul class="no-bullet"> {% for tool in page.Tools %}
+          <li>{{tool | capitalize }}</li>
+            {% endfor %}
+            </ul>
+      {% endif %}
+        {% if page.categories != nil and page.categories != empty %}
+        <h4>Category</h4>
+        <ul class='button-group stack'>
+            <span>
+            {% assign groups = site.data.category | sort: "name"  %}
+            {% assign cats = page.categories | sort %}
+              {% for cat in cats %}
+                {% for group in groups %}
+                  {% if cat == group.name %}
+              <li><a href="{{site.url}}/portfolio/category/{{group.slug}}" class="button boxed black">  {{ group.name }}</a></li>
+                  {% break %}
+                  {% endif %}
+                  {% endfor %}
+              {% endfor %}
+            </span>
+        </ul>
+      {% endif %}
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="two spacing"></div>
+</div>
+{% assign related = site.portfolio | where: "categories", page.selectedCat %}
+{% if related != nill and related != empty %}
+<div class="full light-grey no-bottom-padding">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+          <div  class=" animLogo dark small" id="animLogoRelated"></div>
+        <h2>Related projects</h2>
+      </div>
+    </div>
+  </div>
+  <div class="related-works">
+    <div class="row">
+      <div class=" large-12 columns">
+      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
+        {% for work in related limit:3%}
+          {% if page.title == work.title %}
+          {% continue %}
+          {% endif %}
+      <li class="text-light-grey">
+        <div class="work-wrapper">
+          <a href="{{site.url}}/{{work.link_to}}" class="work">
+            <img src="{{site.url}}/{{work.image}}" alt="">
+            <div class="info">
+              <h3>{{work.title}}</h3>
+              <p>
+              {% for cat in work.categories %}
+              <span>{{cat}}{% unless forloop.last %},{% endunless %}</span>
+              {% endfor %}
+            </p>
+            </div>
+          </a>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+    </div>
+    </div>
+  </div>
+</div>
+{% endif %}

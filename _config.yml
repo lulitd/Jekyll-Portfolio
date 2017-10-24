@@ -1,0 +1,38 @@
+# Site settings
+title: Lalaine Ulit-Destajo
+email: lulitdestajo@gmail.com
+description: "Portfolio of Lalaine Ulit-Destajo. Creative Coder.Multimedia and interaction Designer."
+
+social:
+  twitter: "http://twitter.com/ludestajo"
+  linkedin: "https://www.linkedin.com/in/lulitdestajo/"
+  instagram:
+  github:
+  500px:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: http://lalaineulitdestajo.com # the base hostname & protocol for your site
+
+# collections:
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:title/index.html
+  categories:
+    output: true
+#default
+defaults:
+  -
+    scope:
+      path: ""
+      type: categories
+    values:
+      layout: "category"
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-paginate
+  - jekyll-compose
+
+paginate: 6
+paginate_path: "blog/page:num"

@@ -1,0 +1,38 @@
+---
+layout: default
+useDarkNav: true
+AnimLogo: true
+NounProject:
+- ImageName: Vr Goggles
+  Name: No More Heroes
+  URL: https://thenounproject.com/icon/840666/
+- ImageName: Creative Ideas
+  Name: Symbolon
+  URL: https://thenounproject.com/icon/1246511
+- ImageName: Creative
+  Name: Oksana Latysheva
+  URL: https://thenounproject.com/icon/884544/
+---
+
+<div class="full centered-text light-grey">
+  <div class="section-title small">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <div class="spacing"></div>
+        <div  class=" animLogo dark small" id="animLogo"></div>
+        <h2>Special Thanks</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-10 large-centered columns">
+      <h3>Noun Project</h3>
+      <p>The following images were modified to create the animated logo found throughout the site.</p>
+      <ul class="button-group stack">
+      {%for credit in page.NounProject %}
+      <li><a href="{{credit.URL}}" target="_blank" class="button boxed black">{{credit.ImageName}} by {{credit.Name}}</a></li>
+      {%endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

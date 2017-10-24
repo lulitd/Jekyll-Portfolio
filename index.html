@@ -1,0 +1,111 @@
+---
+layout: default
+section_id: home
+AnimLogo: true
+slides:
+- layout: default
+  title: Creative Coder
+  tagline: Exhibitions, Games, Mobile, VR
+  image: images/branding/logo_w.svg
+  background: images/header/code_bg.jpg
+- layout: default
+  title: Content Creator
+  tagline: Digital, Video, Graphics
+  image: images/branding/logo_w.svg
+  background: images/header/content_bg.jpg
+- layout: default
+  title: Interaction Designer
+  tagline: Mobile, VR, Installations, Motion Tracking
+  image: images/branding/logo_w.svg
+  background: images/header/interaction_bg.jpg
+---
+
+<div class="full no-padding">
+  <div id="slides" class="fullscreen">
+    <div class="slides-container">
+      {% for slide in page.slides %}
+        <div class="slide">
+          <div class="slide-info">
+            <div class="row">
+              <div class="large-10 large-centered columns">
+                {% if slide.layout == 'default' %}
+                  <div class="image-wrapper" style="background-image: url({{site.url}}/{{slide.image}});"></div>
+                  <div class="two spacing"></div>
+                  <h1>{{slide.title}}</h1>
+                  <p>{{slide.tagline}}</p>
+                {% else %}
+                  <div class="image-wrapper" style="background-image: url({{site.url}}/{{slide.image_top}});"></div>
+                  <div class="image-wrapper arrows" style="background-image: url({{site.url}}/{{slide.image_bottom}});"></div>
+                  <div class="three spacing"></div>
+
+                  <h1>{{slide.title}}</h1>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <img src="{{site.url}}/{{slide.background}}" alt="">
+        </div>
+      {% endfor %}
+    </div>
+    <nav class="slides-navigation">
+      <a href="#" class="next"><i class="icon-arrows-slim-right"></i></a>
+      <a href="#" class="prev"><i class="icon-arrows-slim-left"></i></a>
+    </nav>
+  </div>
+</div>
+
+<div class="full centered-text light-grey">
+  <div class="section-title small">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <div class="spacing"></div>
+        <div  class=" animLogo dark small" id="animLogo"></div>
+        <h2>About Me</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-10 large-centered columns">
+
+      <p class="big-text">
+        Hi, my name is Lalaine. I'm freelance creative developer based in Toronto who loves experimenting with tech.
+        I remember growing up watching all those spy movies in awe, because of all the cool gadgets.
+        I think that where my fascination with technology started.</p>
+  <p class="big-text">I don't look at code as a collection of IF statements but as a form of creative expression.
+    Most of the programs I've written were used within a live performance context. I use C++, C# (Unity3D), Arduino, Processing, MaxMSP and OpenFrameworks. I can also use HTML, CSS, JavaScript and Java.
+    I develop software for live performances, games and mobile.</p>
+  <p class="big-text">Once described as a magical fairy, I enjoy bringing magic to life, whether it be through interactive projections or scenes we can only imagine in Photoshop. It is not only about creating magic, and seeing an awestruck look in someone's eyes though it is a big part of it but collaborating with people to create some magic.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="full grey">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <div  class=" animLogo dark small" id="animLogoRelated"></div>
+        <h2>Recent works</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 works">
+        {% for work in site.portfolio limit:6 %}
+          <li><div class="work-wrapper work">
+            <a href="{{site.url}}/{{work.link_to}}" class="work-link">
+              <img src="{{site.url}}/{{work.image}}" alt=""> </img>
+            </a>
+              <div class="info">
+                <h3>{{work.title}}</h3>
+                <p>
+                  {{ work.categories | array_to_sentence_string: '&' }}
+                </p>
+              </div>
+
+          </div></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

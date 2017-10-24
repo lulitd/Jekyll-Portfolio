@@ -1,0 +1,24 @@
+<div class="full grey">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h2>Categories</small></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 large-centered columns">
+{% assign groups = site.data.category | sort: "name" %}
+<ul class="button-group">
+{% for group in groups %}
+{% if page.tag == group.name %}
+<li><a href="" class="button boxed black selected">  {{ group.name }}</a></li>
+{% else %}
+<li><a href="{{site.url}}/portfolio/category/{{group.slug}}" class="button boxed black">  {{ group.name }}</a></li>
+{% endif %}
+{%endfor%}
+</ul>
+</div>
+</div>
+</div>

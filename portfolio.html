@@ -1,0 +1,45 @@
+---
+layout: default
+section_id: portfolio
+headerImage: images/header/interaction_bg.jpg
+permalink: /portfolio/index.html
+---
+<div class="full light-grey white-light centered-text" style="background-image: url({{site.url}}/{{page.headerImage}});">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h1 class="wow slideInUp">Works</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include categoryIndex.html %}
+
+{% assign items = site.portfolio | sort: 'rank' %}
+<div class="full">
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 works">
+        {% for work in items %}
+        <li>
+          <div class="work-wrapper work">
+              <a href="{{site.url}}/{{work.link_to}}" class="work-link">
+              <img src="{{site.url}}/{{work.image}}" alt="" >
+            </a>
+            <div class="info">
+              <h3>{{work.title}}</h3>
+              <p>
+              {{ work.categories | array_to_sentence_string: '&' }}
+            </p>
+            </div>
+
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>

@@ -1,0 +1,6 @@
+- name: Home
+  path: ""
+  section_id: home
+- name: Works
+  path: portfolio/
+  section_id: portfolio

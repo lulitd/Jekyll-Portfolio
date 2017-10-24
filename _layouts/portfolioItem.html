@@ -96,7 +96,7 @@ style="{% if page.headerImage %}background-image: url({{site.url}}{{site.baseurl
               {% for cat in cats %}
                 {% for group in groups %}
                   {% if cat == group.name %}
-              <li><a href="{{site.url}}/portfolio/category/{{group.slug}}" class="button boxed black">  {{ group.name }}</a></li>
+              <li><a href="{{site.url}}{{site.baseurl}}/portfolio/category/{{group.slug}}" class="button boxed black">  {{ group.name }}</a></li>
                   {% break %}
                   {% endif %}
                   {% endfor %}

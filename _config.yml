@@ -10,7 +10,7 @@ social:
   github:
   500px:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://lulitd.github.io/Jekyll-Portfolio/ # the base hostname & protocol for your site
+url: https://lulitd.github.io/Jekyll-Portfolio # the base hostname & protocol for your site
 
 # collections:
 collections:

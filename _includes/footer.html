@@ -29,16 +29,16 @@
       <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 </div>
 
-<script src="./bower_components/jquery/dist/jquery.min.js"></script>
-<script src="./bower_components/foundation/js/foundation.min.js"></script>
-<script src="./js/jquery.superslides.min.js"></script>
-<script src="./js/slick.min.js"></script>
-<script src="./js/wow.min.js"></script>
-<script src="./js/jquery.validate.js"></script>
-<script src="./bower_components/countto/jquery.countTo.js"></script>
-<script src="./bower_components/appear/jquery.appear.js"></script>
-<script src="./js/app.js"></script>
+<script src="{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/bower_components/foundation/js/foundation.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/jquery.superslides.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/slick.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/wow.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/jquery.validate.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/bower_components/countto/jquery.countTo.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/bower_components/appear/jquery.appear.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
 {% if page.AnimLogo !=nil and page.AnimLogo !=empty and page.AnimLogo!=false %}
-<script src="./js/bodymovin.js"></script>
-<script src="./js/logoAnim.js"></script>
+<script src="{{ "/js/bodymovin.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/logoAnim.js" | prepend: site.baseurl }}"></script>
 {%endif%}

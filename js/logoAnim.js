@@ -5,7 +5,8 @@ function getRandomIntInclusive(min, max) {
 }
 
 var loc = window.location;
-var baseUrl = loc.protocol + "//" + loc.hostname + (loc.port? ":"+loc.port : "") ;
+var url = loc.pathname.split('/')[1];
+var baseUrl = loc.protocol + "//" + loc.hostname+"/"+url+"/"+ (loc.port? ":"+loc.port : "") ;
 var seq=[
   [0,15],
   [16,31],

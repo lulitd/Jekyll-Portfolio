@@ -18,7 +18,7 @@ useDarkNav: true
 <ul class="button-group  stack">
 {% for group in groups %}
 
-<li><a href="{{site.url}}/portfolio/category/{{group.slug}}" class="button boxed black">  {{ group.name }}</a></li>
+<li><a href="{{site.url}}{{site.baseurl}}/portfolio/category/{{group.slug}}" class="button boxed black">  {{ group.name }}</a></li>
 
 {%endfor%}
 </ul>

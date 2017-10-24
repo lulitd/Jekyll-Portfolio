@@ -9,7 +9,7 @@ social:
   instagram:
   github:
   500px:
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: https://lulitd.github.io/Jekyll-Portfolio # the subpath of your site, e.g. /blog
 url: https://lulitd.github.io/Jekyll-Portfolio # the base hostname & protocol for your site
 
 # collections:

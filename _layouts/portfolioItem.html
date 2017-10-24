@@ -4,7 +4,7 @@ section_id: portfolio
 ---
 
 <div class="full image-bg bg-left {%if page.useDarkNav == false%} dark {%else%} light {%endif%}"
-style="{% if page.headerImage %}background-image: url({{site.url}}/{{page.headerImage}});{% endif %}
+style="{% if page.headerImage %}background-image: url({{site.url}}{{site.baseurl}}/{{page.headerImage}});{% endif %}
 ">
   <div class="four spacing"></div>
   <div class="section-title">
@@ -131,8 +131,8 @@ style="{% if page.headerImage %}background-image: url({{site.url}}/{{page.header
           {% endif %}
       <li class="text-light-grey">
         <div class="work-wrapper">
-          <a href="{{site.url}}/{{work.link_to}}" class="work">
-            <img src="{{site.url}}/{{work.image}}" alt="">
+          <a href="{{site.url}}{{site.baseurl}}/{{work.link_to}}" class="work">
+            <img src="{{site.url}}{{site.baseurl}}/{{work.image}}" alt="">
             <div class="info">
               <h3>{{work.title}}</h3>
               <p>

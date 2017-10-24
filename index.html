@@ -29,13 +29,13 @@ slides:
             <div class="row">
               <div class="large-10 large-centered columns">
                 {% if slide.layout == 'default' %}
-                  <div class="image-wrapper" style="background-image: url({{site.url}}/{{slide.image}});"></div>
+                  <div class="image-wrapper" style="background-image: url({{site.url}}{{site.baseurl}}/{{slide.image}});"></div>
                   <div class="two spacing"></div>
                   <h1>{{slide.title}}</h1>
                   <p>{{slide.tagline}}</p>
                 {% else %}
-                  <div class="image-wrapper" style="background-image: url({{site.url}}/{{slide.image_top}});"></div>
-                  <div class="image-wrapper arrows" style="background-image: url({{site.url}}/{{slide.image_bottom}});"></div>
+                  <div class="image-wrapper" style="background-image: url({{site.url}}{{site.baseurl}}/{{slide.image_top}});"></div>
+                  <div class="image-wrapper arrows" style="background-image: url({{site.url}}{{site.baseurl}}/{{slide.image_bottom}});"></div>
                   <div class="three spacing"></div>
 
                   <h1>{{slide.title}}</h1>
@@ -43,7 +43,7 @@ slides:
               </div>
             </div>
           </div>
-          <img src="{{site.url}}/{{slide.background}}" alt="">
+          <img src="{{site.url}}{{site.baseurl}}/{{slide.background}}" alt="">
         </div>
       {% endfor %}
     </div>
@@ -93,8 +93,8 @@ slides:
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 works">
         {% for work in site.portfolio limit:6 %}
           <li><div class="work-wrapper work">
-            <a href="{{site.url}}/{{work.link_to}}" class="work-link">
-              <img src="{{site.url}}/{{work.image}}" alt=""> </img>
+            <a href="{{site.url}}{{site.baseurl}}/{{work.link_to}}" class="work-link">
+              <img src="{{site.url}}{{site.baseurl}}/{{work.image}}" alt=""> </img>
             </a>
               <div class="info">
                 <h3>{{work.title}}</h3>

@@ -20,8 +20,8 @@ permalink: "/portfolio/category/"
         {% for work in related %}
       <li class="text-light-grey">
         <div class="work-wrapper">
-          <a href="{{site.url}}/{{work.link_to}}" class="work">
-            <img src="{{site.url}}/{{work.image}}" alt="">
+          <a href="{{site.url}}{{site.baseurl}}/{{work.link_to}}" class="work">
+            <img src="{{site.url}}{{site.baseurl}}/{{work.image}}" alt="">
             <div class="info">
               <h3>{{work.title}}</h3>
               <p>

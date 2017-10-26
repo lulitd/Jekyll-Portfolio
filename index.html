@@ -8,16 +8,22 @@ slides:
   tagline: Exhibitions, Games, Mobile, VR
   image: images/branding/logo_w.svg
   background: images/header/code_bg.jpg
+  background-md: images/header/code_bg_med.jpg
+  background-lg: images/header/code_bg_lg.jpg
 - layout: default
   title: Content Creator
   tagline: Digital, Video, Graphics
   image: images/branding/logo_w.svg
   background: images/header/content_bg.jpg
+  background-md: images/header/content_bg_med.jpg
+  background-lg: images/header/content_bg_lg.jpg
 - layout: default
   title: Interaction Designer
   tagline: Mobile, VR, Installations, Motion Tracking
   image: images/branding/logo_w.svg
   background: images/header/interaction_bg.jpg
+  background-md: images/header/interaction_bg_med.jpg
+  background-lg: images/header/interaction_bg_lg.jpg
 ---
 
 <div class="full no-padding">
@@ -43,7 +49,8 @@ slides:
               </div>
             </div>
           </div>
-          <img src="{{site.url}}{{site.baseurl}}/{{slide.background}}" alt="">
+          <img data-interchange="[{{site.url}}{{site.baseurl}}/{{slide.background}}, (default)], [{{site.url}}{{site.baseurl}}/{{slide.background-md}}, (medium)],[{{site.url}}{{site.baseurl}}/{{slide.background-lg}}, (large)]">
+          <!--<noscript><img src="{{site.url}}{{site.baseurl}}/{{slide.background}}"></noscript> -->
         </div>
       {% endfor %}
     </div>

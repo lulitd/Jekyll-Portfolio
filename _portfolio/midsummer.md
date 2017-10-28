@@ -8,6 +8,8 @@ rank: 12 # determines order lowest to highest!
 #Images
 image: images/work/thumb/midsum.jpg
 headerImage: images/work/header/midsum.jpg
+headerImage-md: images/work/header/midsum.jpg
+headerImage-lg: images/work/header/midsum.jpg
 #content
 date: 2013-04-12
 collaboration:

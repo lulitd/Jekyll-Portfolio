@@ -8,6 +8,8 @@ rank: 2 # determines order lowest to highest!
 #Images
 image: images/work/thumb/blink2.gif
 headerImage: images/work/header/blink1.png
+headerImage-md: images/work/header/blink1.png
+headerImage-lg: images/work/header/blink1.png
 #content
 date: 2015-11-10
 collaboration:

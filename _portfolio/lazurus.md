@@ -8,6 +8,8 @@ rank: 11 # determines order lowest to highest!
 #Images
 image: images/work/thumb/lazurus1.jpg
 headerImage: images/work/header.lazurus1.jpg
+headerImage-md: images/work/header.lazurus1.jpg
+headerImage-lg: images/work/header.lazurus1.jpg
 #content
 date: 2015-09-15
 collaboration:

@@ -8,6 +8,8 @@ rank: 1 # determines order lowest to highest!
 #Images
 image: images/work/thumb/encounter.jpg
 headerImage: images/work/header/encounter.jpg
+headerImage-md: images/work/header/encounter.jpg
+headerImage-lg: images/work/header/encounter.jpg
 #content
 date: 2016-04-13
 collaboration:

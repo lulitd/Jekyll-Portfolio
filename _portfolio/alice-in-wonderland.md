@@ -8,6 +8,8 @@ rank: 20 # determines order lowest to highest!
 #Images
 image: images/work/thumb/alice.jpg
 headerImage: images/work/header/alice.jpg
+headerImage-md: images/work/header/alice.jpg
+headerImage-lg: images/work/header/alice.jpg
 #content
 date: 2014-02-13
 collaboration:

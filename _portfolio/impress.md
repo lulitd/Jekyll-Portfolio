@@ -8,6 +8,8 @@ rank: 10 # determines order lowest to highest!
 #Images
 image: images/work/thumb/impress.jpg
 headerImage: images/work/thumb/impress.jpg
+headerImage-md: images/work/thumb/impress.jpg
+headerImage-lg: images/work/thumb/impress.jpg
 #content
 date: 2015-07-13
 collaboration:

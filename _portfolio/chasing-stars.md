@@ -8,6 +8,8 @@ rank: 3 # determines order lowest to highest!
 #Images
 image: images/work/thumb/chasing01.jpg
 headerImage: images/work/header/chasing01.jpg
+headerImage-md: images/work/header/chasing01.jpg
+headerImage-lg: images/work/header/chasing01.jpg
 #content
 date: 2016-04-13
 collaboration:

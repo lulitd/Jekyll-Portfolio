@@ -4,8 +4,11 @@ section_id: portfolio
 ---
 
 <div class="full image-bg bg-left {%if page.useDarkNav == false%} dark {%else%} light {%endif%}"
-style="{% if page.headerImage %}background-image: url({{site.url}}{{site.baseurl}}/{{page.headerImage}});{% endif %}
-">
+  {% if page.headerImage %} 
+    data-interchange="[{{site.url}}{{site.baseurl}}/{{page.headerImage}}, (default)],[{{site.url}}{{site.baseurl}}/{{page.headerImage-md}} (medium)],[{{site.url}}{{site.baseurl}}/{{page.headerImage-lg}}, (large)]"
+    style="background-size:cover;"
+  {% endif %}
+>
   <div class="four spacing"></div>
   <div class="section-title">
     <div class="row">

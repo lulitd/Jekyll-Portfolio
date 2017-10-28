@@ -2,9 +2,11 @@
 layout: default
 section_id: portfolio
 headerImage: images/header/interaction_bg.jpg
+headerImage-md: images/header/interaction_bg_med.jpg
+headerImage-lg: images/header/interaction_bg_lg.jpg
 permalink: /portfolio/index.html
 ---
-<div class="full light-grey white-light centered-text" style="background-image: url({{site.url}}{{site.baseurl}}/{{page.headerImage}});">
+<div class="full light-grey centered-text" data-interchange="[{{site.url}}{{site.baseurl}}/{{page.headerImage}}, (default)],[{{site.url}}{{site.baseurl}}/{{page.headerImage-md}} (medium)],[{{site.url}}{{site.baseurl}}/{{page.headerImage-lg}}, (large)]" style="background-size:cover;">
   <div class="four spacing"></div>
   <div class="section-title">
     <div class="row">

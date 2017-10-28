@@ -10,6 +10,8 @@ rank: 1 # determines order lowest to highest!
 #Images/video
 image: images/work/thumb/midsum.jpg #thumbnail
 headerImage: images/work/header/midsum.jpg #header
+headerImage-md: images/work/header/midsum.jpg # header medium
+headerImage-lg: images/work/header/midsum.jpg # header large
 youtubeURL: #youtubeURL
 vimeoURL: "https://player.vimeo.com/video/63912143?color=FECE1A&amp;byline=0&amp;portrait=0" #vimeo
 
@@ -29,4 +31,4 @@ categories: ['UX', 'Programming', 'Motion Tracking', 'Game Design'] # catergorie
 selectedCat: 'Motion Tracking' # determines what is shown in related works.
 ---
 
-write all your description here. 
+write all your description here.

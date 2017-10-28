@@ -6,9 +6,9 @@ description: "Portfolio of Lalaine Ulit-Destajo. Creative Coder.Multimedia and i
 social:
   twitter: "http://twitter.com/ludestajo"
   linkedin: "https://www.linkedin.com/in/lulitdestajo/"
-  instagram:
-  github:
-  500px:
+  instagram: "https://www.instagram.com/lulitd/"
+  github: "github.com/lulitd"
+  500px: "https://500px.com/lulitdestajo"
 baseurl:  # the subpath of your site, e.g. /blog
 url: http://lalaineulitdestajo.com # the base hostname & protocol for your site
 

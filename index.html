@@ -6,24 +6,24 @@ slides:
 - layout: default
   title: Creative Coder
   tagline: Exhibitions, Games, Mobile, VR
-  image: images/branding/logo_w.svg
-  background: images/header/code_bg.jpg
-  background-md: images/header/code_bg_med.jpg
-  background-lg: images/header/code_bg_lg.jpg
+  image: /images/branding/logo_w.svg
+  background: /images/header/code_bg.jpg
+  background-md: /images/header/code_bg_med.jpg
+  background-lg: /images/header/code_bg_lg.jpg
 - layout: default
   title: Content Creator
   tagline: Digital, Video, Graphics
-  image: images/branding/logo_w.svg
-  background: images/header/content_bg.jpg
-  background-md: images/header/content_bg_med.jpg
-  background-lg: images/header/content_bg_lg.jpg
+  image: /images/branding/logo_w.svg
+  background: /images/header/content_bg.jpg
+  background-md: /images/header/content_bg_med.jpg
+  background-lg: /images/header/content_bg_lg.jpg
 - layout: default
   title: Interaction Designer
   tagline: Mobile, VR, Installations, Motion Tracking
-  image: images/branding/logo_w.svg
-  background: images/header/interaction_bg.jpg
-  background-md: images/header/interaction_bg_med.jpg
-  background-lg: images/header/interaction_bg_lg.jpg
+  image: /images/branding/logo_w.svg
+  background: /images/header/interaction_bg.jpg
+  background-md: /images/header/interaction_bg_med.jpg
+  background-lg: /images/header/interaction_bg_lg.jpg
 ---
 
 <div class="full no-padding">
@@ -35,13 +35,13 @@ slides:
             <div class="row">
               <div class="large-10 large-centered columns">
                 {% if slide.layout == 'default' %}
-                  <div class="image-wrapper" style="background-image: url({{site.url}}{{site.baseurl}}/{{slide.image}});"></div>
+                  <div class="image-wrapper" style="background-image: url({{slide.image}});"></div>
                   <div class="two spacing"></div>
                   <h1>{{slide.title}}</h1>
                   <p>{{slide.tagline}}  </p>
                 {% else %}
-                  <div class="image-wrapper" style="background-image: url({{site.url}}{{site.baseurl}}/{{slide.image_top}});"></div>
-                  <div class="image-wrapper arrows" style="background-image: url({{site.url}}{{site.baseurl}}/{{slide.image_bottom}});"></div>
+                  <div class="image-wrapper" style="background-image: url({{slide.image_top}});"></div>
+                  <div class="image-wrapper arrows" style="background-image: url({{slide.image_bottom}});"></div>
                   <div class="three spacing"></div>
 
                   <h1>{{slide.title}}</h1>
@@ -49,8 +49,8 @@ slides:
               </div>
             </div>
           </div>
-          <img data-interchange="[{{site.url}}{{site.baseurl}}/{{slide.background}}, (default)], [{{site.url}}{{site.baseurl}}/{{slide.background-md}}, (medium)],[{{site.url}}{{site.baseurl}}/{{slide.background-lg}}, (large)]">
-          <!--<noscript><img src="{{site.url}}{{site.baseurl}}/{{slide.background}}"></noscript> -->
+          <img data-interchange="[{{slide.background}}, (default)], [{{slide.background-md}}, (medium)],[{{slide.background-lg}}, (large)]">
+          <noscript><img src="{{site.url}}{{site.baseurl}}/{{slide.background}}"></noscript>
         </div>
       {% endfor %}
     </div>
@@ -100,8 +100,8 @@ slides:
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 works">
         {% for work in site.portfolio limit:6 %}
           <li><div class="work-wrapper work">
-            <a href="{{site.url}}{{site.baseurl}}/{{work.link_to}}" class="work-link">
-              <img src="{{site.url}}{{site.baseurl}}/{{work.image}}" alt=""> </img>
+            <a href="{{work.link_to}}" class="work-link">
+              <img src="{{work.image}}" alt=""> </img>
             </a>
               <div class="info">
                 <h3>{{work.title}}</h3>

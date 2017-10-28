@@ -31,7 +31,7 @@ function setupAnimLogo(box){
     loop: false,
     autoplay: false,
     prerender: false,
-    path: baseUrl+"/json/logo.json"
+    path: "../json/logo.json"
     });
 
     box.addEventListener("mouseenter", function () {

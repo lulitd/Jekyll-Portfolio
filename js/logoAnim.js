@@ -5,8 +5,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 var loc = window.location;
-var url = loc.pathname.split('/')[1];
-var baseUrl = loc.protocol + "//" + loc.hostname+"/"+url+"/"+ (loc.port? ":"+loc.port : "") ;
+var baseUrl = loc.protocol + "//" + loc.hostname+"/"+ (loc.port? ":"+loc.port : "") ;
 var seq=[
   [0,15],
   [16,31],
@@ -31,7 +30,7 @@ function setupAnimLogo(box){
     loop: false,
     autoplay: false,
     prerender: false,
-    path: "../json/logo.json"
+    path: "/json/logo.json"
     });
 
     box.addEventListener("mouseenter", function () {
